@@ -580,13 +580,161 @@ main .first-big .more-link .right-bottom {
   height: 353px;
 }
 
-.third-big .all-girl .goddess .name {
+.third-big .all-girl .goddess .speak {
   position: absolute;
-  bottom: -48px;
+  bottom: -20px;
   left: 6px;
   width: 890px;
   height: 130px;
   background-image: url(../images/index/name_1.png);
   background-repeat: no-repeat;
+  background-position: 0 100%;
+  padding-left: 290px;
+  padding-top: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.third-big .all-girl .goddess .speak p {
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+.third-big .all-girl .goddess .speak p span {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 4px;
+  height: 20px;
+  background-color: #e03337;
+}
+
+.third-big .all-girl .goddess .cv {
+  float: right;
+  position: absolute;
+  top: 408px;
+  right: 48px;
+  width: 300px;
+  height: 244px;
+  text-align: right;
+  z-index: 1;
+}
+
+.third-big .all-girl .goddess .cv h2 {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.third-big .all-girl .goddess .cv .name {
+  color: #fff;
+  font-size: 55px;
+}
+
+.third-big .all-girl .goddess .cv a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-image: url(../images/index/icon_sound.png);
+  margin-top: 8px;
+}
+
+.third-big .all-girl .goddess .cv a:hover {
+  background-image: url(../images/index/icon_sound1.png);
+}
+
+.third-big .all-girl .photo {
+  position: absolute;
+  bottom: 58px;
+  left: 74px;
+  width: 600px;
+  height: 120px;
+  z-index: 1;
+}
+
+.third-big .all-girl .photo .photo-on {
+  position: relative;
+  width: 600px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.third-big .all-girl .photo .photo-on .photo-in {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url(../images/index/icon_bg.png);
+}
+
+.third-big .all-girl .photo .photo-on .photo-in ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1043px;
+  height: 120px;
+}
+
+.third-big .all-girl .photo .photo-on .photo-in ul li {
+  float: left;
+  width: 133px;
+  height: 120px;
+  line-height: 120px;
+  margin: 0 8px;
+  opacity: .6;
+}
+
+.third-big .all-girl .photo .photo-on .photo-in ul li img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.third-big .all-girl .photo .photo-on .photo-in ul .bright {
+  opacity: 1;
+}
+
+.third-big .all-girl .photo .left {
+  display: inline-block;
+  position: absolute;
+  top: 24px;
+  left: -64px;
+  width: 40px;
+  height: 70px;
+  background-image: url(../images/index/arrows.png);
+  cursor: pointer;
+}
+
+.third-big .all-girl .photo .left:hover {
+  background-image: url(../images/index/arrows.png);
+  background-position: 0 -71px;
+}
+
+.third-big .all-girl .photo .right {
+  display: inline-block;
+  position: absolute;
+  top: 24px;
+  right: -64px;
+  width: 40px;
+  height: 70px;
+  background-image: url(../images/index/arrows.png);
+  background-position: -41px 0;
+  cursor: pointer;
+}
+
+.third-big .all-girl .photo .right:hover {
+  background-image: url(../images/index/arrows.png);
+  background-position: -41px -71px;
+}
+
+.third-big .role {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1064px;
+  height: 100%;
+  background-image: url(../images/index/role_1.png);
 }
 /*# sourceMappingURL=index.css.map */

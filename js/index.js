@@ -40,3 +40,40 @@ $('.new-top span').on('mouseenter', function () {
     $('.new-bottom div').removeClass('taggle');
     $(`.new-bottom .number${index+1}`).addClass('taggle');
 })
+
+// 第三张大图轮播
+let dianNum = 0;
+$('.photo-in li').on('click', function () {
+    $('.photo-in li').removeClass('bright');
+    $(this).addClass('bright');
+})
+
+$('.photo .right').on('click', function () {
+    dianNum++
+    if (dianNum >= 0 && dianNum <= 5) {
+        $('.photo-in li').removeClass('bright');
+        $('.photo-in li').eq(dianNum).addClass('bright');
+
+        if (dianNum == 4) {
+            $('.photo-in ul').animate({
+                'left': -450
+            })
+        }
+    } else {
+        dianNum = 5
+    }
+})
+
+$('.photo .left').on('click', function () {
+    if (dianNum != 0) {
+        dianNum--
+        $('.photo-in li').removeClass('bright');
+        $('.photo-in li').eq(dianNum).addClass('bright');
+
+        if (dianNum == 3) {
+            $('.photo-in ul').animate({
+                'left': 0
+            })
+        }
+    }
+})

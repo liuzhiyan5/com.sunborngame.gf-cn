@@ -527,15 +527,162 @@ main {
                 height: 353px;
             }
 
-            .name {
+            .speak {
                 position: absolute;
-                bottom: -48px;
+                bottom: -20px;
                 left: 6px;
                 width: 890px;
                 height: 130px;
                 background-image: url(../images/index/name_1.png);
                 background-repeat: no-repeat;
+                background-position: 0 100%;
+                padding-left: 290px;
+                padding-top: 25px;
+                box-sizing: border-box;
+
+                p {
+                    position: relative;
+                    font-size: 16px;
+                    color: #fff;
+                    line-height: 30px;
+                    padding-left: 10px;
+
+                    span {
+                        position: absolute;
+                        left: 0;
+                        top: 5px;
+                        width: 4px;
+                        height: 20px;
+                        background-color: #e03337;
+                    }
+                }
+            }
+
+            .cv {
+                float: right;
+                position: absolute;
+                top: 408px;
+                right: 48px;
+                width: 300px;
+                height: 244px;
+                text-align: right;
+                z-index: 1;
+
+                h2 {
+                    color: #fff;
+                    font-size: 100px;
+                    font-weight: 700;
+                }
+
+                .name {
+                    color: #fff;
+                    font-size: 55px;
+                }
+
+                a {
+                    display: inline-block;
+                    width: 48px;
+                    height: 48px;
+                    background-image: url(../images/index/icon_sound.png);
+                    margin-top: 8px;
+
+                    &:hover {
+                        background-image: url(../images/index/icon_sound1.png);
+                    }
+                }
             }
         }
+
+        .photo {
+            position: absolute;
+            bottom: 58px;
+            left: 74px;
+            width: 600px;
+            height: 120px;
+            z-index: 1;
+
+            .photo-on {
+                position: relative;
+                width: 600px;
+                height: 120px;
+                overflow: hidden;
+
+                .photo-in {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    background-image: url(../images/index/icon_bg.png);
+
+                    ul {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 1043px;
+                        height: 120px;
+
+                        li {
+                            float: left;
+                            width: 133px;
+                            height: 120px;
+                            line-height: 120px;
+                            margin: 0 8px;
+                            opacity: .6;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                vertical-align: middle;
+                            }
+                        }
+
+                        .bright {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            .left {
+                display: inline-block;
+                position: absolute;
+                top: 24px;
+                left: -64px;
+                width: 40px;
+                height: 70px;
+                background-image: url(../images/index/arrows.png);
+                cursor: pointer;
+
+                &:hover {
+                    background-image: url(../images/index/arrows.png);
+                    background-position: 0 -71px;
+                }
+            }
+
+            .right {
+                display: inline-block;
+                position: absolute;
+                top: 24px;
+                right: -64px;
+                width: 40px;
+                height: 70px;
+                background-image: url(../images/index/arrows.png);
+                background-position: -41px 0;
+                cursor: pointer;
+
+                &:hover {
+                    background-image: url(../images/index/arrows.png);
+                    background-position: -41px -71px;
+                }
+            }
+        }
+    }
+
+    .role {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1064px;
+        height: 100%;
+        background-image: url(../images/index/role_1.png);
     }
 }
