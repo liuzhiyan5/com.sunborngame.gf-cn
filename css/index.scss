@@ -506,7 +506,7 @@ main {
         height: 726px;
         margin: 0px auto;
 
-        .goddess {
+        #goddess {
             position: relative;
             width: 1135px;
             height: 462px;
@@ -522,9 +522,11 @@ main {
             .doll {
                 position: absolute;
                 top: 0;
-                left: 50px;
+                // left: 50px;
+                left: 240px;
                 width: 370px;
                 height: 353px;
+                opacity: 0;
             }
 
             .speak {
@@ -596,7 +598,7 @@ main {
         .photo {
             position: absolute;
             bottom: 58px;
-            left: 74px;
+            left: 70px;
             width: 600px;
             height: 120px;
             z-index: 1;
@@ -680,9 +682,367 @@ main {
     .role {
         position: absolute;
         top: 0;
-        right: 0;
+        // right: 0;
+        right: 40px;
         width: 1064px;
         height: 100%;
         background-image: url(../images/index/role_1.png);
+        opacity: 0;
+    }
+}
+
+// 第四张大图
+.fourth-big {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    background-image: url(../images/index/bg_index4.jpg);
+    background-position: center;
+
+    #battle {
+        position: absolute;
+        top: 160px;
+        left: 50%;
+        width: 550px;
+        height: 80px;
+        margin-left: 100px;
+    }
+
+    .atlas {
+        position: absolute;
+        top: 310px;
+        left: 50%;
+        width: 1159px;
+        height: 600px;
+        margin-left: -579px;
+
+        .atlas-title {
+            float: left;
+            width: 270px;
+            height: 420px;
+            background-color: #000;
+
+            div {
+                float: right;
+                position: relative;
+                width: 270px;
+                height: 105px;
+                color: #fff;
+                line-height: 105px;
+                text-align: center;
+                font-size: 22px;
+                background-color: #252525;
+                margin-bottom: 2px;
+                cursor: pointer;
+                letter-spacing: 3px;
+
+                b {
+                    display: inline-block;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    margin-top: -15px;
+                    width: 30px;
+                    height: 30px;
+                    background-color: #ffb400;
+                    transform: rotate(45deg);
+                    opacity: 0;
+                }
+
+                &:hover {
+                    width: 290px;
+                    background-color: #ffb400;
+                    color: #252525;
+                    font-size: 26px;
+                    font-weight: 700;
+                    text-decoration: none;
+                    transition: all .6s;
+                }
+            }
+
+            .active {
+                width: 290px;
+                background-color: #ffb400;
+                color: #252525;
+                font-size: 26px;
+                font-weight: 700;
+
+                b {
+                    position: absolute;
+                    top: 50%;
+                    right: -14px;
+                    opacity: 1;
+                    transition: all .4s;
+                }
+            }
+        }
+
+        .none {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .3);
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+
+            img {
+                max-height: 100%;
+            }
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .atlas-content1,
+        .atlas-content2,
+        .atlas-content3 {
+            display: none;
+            float: left;
+            width: 834px;
+            height: 564px;
+            background-color: #fff;
+            padding: 32px;
+            padding-bottom: 23px;
+            padding-right: 23px;
+
+
+            div {
+                float: left;
+                width: 397px;
+                height: 266px;
+                overflow: hidden;
+                cursor: pointer;
+                margin: 10px;
+                overflow: hidden;
+
+                img {
+                    width: 407px;
+                }
+            }
+
+            .lunbo {
+                position: relative;
+                width: 834px;
+                height: 564px;
+                background-color: #fff;
+                overflow: hidden;
+                margin: 0;
+
+                ul {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 3520px;
+                    height: 600px;
+
+                    li {
+                        float: left;
+                        width: 880px;
+                        height: 600px;
+
+                        img {
+                            float: left;
+                            width: 397px;
+                            margin: 10px;
+                            cursor: pointer;
+
+                            &:nth-child(1),
+                            &:nth-child(2) {
+                                margin-bottom: 44px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .prev,
+        .next {
+            display: inline-block;
+            position: absolute;
+            right: -35px;
+            top: 0;
+            width: 35px;
+            height: 120px;
+            color: #fff;
+            line-height: 130px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .35);
+            cursor: pointer;
+            opacity: .35;
+            margin-top: 0;
+
+            span {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border-left: 3px solid #f6f6f6;
+                border-bottom: 3px solid #f6f6f6;
+                margin-left: 10px;
+                transform: rotate(45deg);
+            }
+        }
+
+        .next {
+            top: 120px;
+
+            span {
+                transform: rotate(225deg);
+                margin-left: -10px;
+            }
+        }
+
+        .taggle {
+            display: block;
+        }
+    }
+}
+
+// 第五张大图
+.fifth-big {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    background-image: url(../images/index/bg_index5.jpg);
+    background-position: center;
+    overflow: hidden;
+
+    .world {
+        position: relative;
+        width: 1000px;
+        height: 514px;
+        margin: 332px auto;
+
+        .world-in {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            ul {
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+                li {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 1000px;
+                    height: 514px;
+
+                    &:first-child {
+                        display: block;
+                    }
+
+                    .world-left {
+                        float: left;
+                        width: 430px;
+
+                        h3 {
+                            width: 269px;
+                            height: 53px;
+                            color: #fff;
+                            line-height: 53px;
+                            text-align: center;
+                            font-size: 28px;
+                            font-weight: 700;
+                            margin-bottom: 30px;
+                            letter-spacing: 2px;
+                            background-image: url(../images/index/view_til_bg.png);
+                        }
+
+                        p {
+                            width: 430px;
+                            color: #fff;
+                            font-size: 20px;
+                            line-height: 36px;
+                        }
+                    }
+
+                    .world-right {
+                        float: right;
+                        width: 499px;
+                        height: 505px;
+                        padding: 11px 0 0 23px;
+                    }
+                }
+            }
+        }
+
+        .left-arrow {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: -120px;
+            width: 46px;
+            height: 46px;
+            border-top: 9px solid #fff;
+            border-left: 9px solid #fff;
+            border-top-left-radius: 8px;
+            transform: rotate(-45deg);
+
+            &:hover {
+                border-color: #e3363a;
+            }
+        }
+
+        .right-arrow {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            right: -96px;
+            width: 46px;
+            height: 46px;
+            border-top: 9px solid #fff;
+            border-left: 9px solid #fff;
+            border-top-left-radius: 8px;
+            transform: rotate(135deg);
+
+            &:hover {
+                border-color: #e3363a;
+            }
+        }
+    }
+}
+
+// 第六张大图
+.sixth-big {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    background-image: url(../images/index/bg_index6.jpg);
+    background-position: center;
+    overflow: hidden;
+
+    .time {
+        position: relative;
+        width: 1200px;
+        height: 910px;
+        margin: 0 auto;
+
+        .timeline {
+            position: absolute;
+            top: 280px;
+            left: 50%;
+            width: 1100px;
+            height: 326px;
+            margin: 0 auto;
+            margin-left: -550px;
+            padding: 10px;
+            background-color: hsla(0, 0%, 100%, .3);
+
+            .timeline-in {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+        }
     }
 }

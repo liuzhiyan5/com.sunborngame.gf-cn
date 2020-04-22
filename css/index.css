@@ -558,13 +558,13 @@ main .first-big .more-link .right-bottom {
   margin: 0px auto;
 }
 
-.third-big .all-girl .goddess {
+.third-big .all-girl #goddess {
   position: relative;
   width: 1135px;
   height: 462px;
 }
 
-.third-big .all-girl .goddess .gun_item {
+.third-big .all-girl #goddess .gun_item {
   position: absolute;
   top: 0;
   left: 0;
@@ -572,15 +572,16 @@ main .first-big .more-link .right-bottom {
   height: 67px;
 }
 
-.third-big .all-girl .goddess .doll {
+.third-big .all-girl #goddess .doll {
   position: absolute;
   top: 0;
-  left: 50px;
+  left: 240px;
   width: 370px;
   height: 353px;
+  opacity: 0;
 }
 
-.third-big .all-girl .goddess .speak {
+.third-big .all-girl #goddess .speak {
   position: absolute;
   bottom: -20px;
   left: 6px;
@@ -595,7 +596,7 @@ main .first-big .more-link .right-bottom {
           box-sizing: border-box;
 }
 
-.third-big .all-girl .goddess .speak p {
+.third-big .all-girl #goddess .speak p {
   position: relative;
   font-size: 16px;
   color: #fff;
@@ -603,7 +604,7 @@ main .first-big .more-link .right-bottom {
   padding-left: 10px;
 }
 
-.third-big .all-girl .goddess .speak p span {
+.third-big .all-girl #goddess .speak p span {
   position: absolute;
   left: 0;
   top: 5px;
@@ -612,7 +613,7 @@ main .first-big .more-link .right-bottom {
   background-color: #e03337;
 }
 
-.third-big .all-girl .goddess .cv {
+.third-big .all-girl #goddess .cv {
   float: right;
   position: absolute;
   top: 408px;
@@ -623,18 +624,18 @@ main .first-big .more-link .right-bottom {
   z-index: 1;
 }
 
-.third-big .all-girl .goddess .cv h2 {
+.third-big .all-girl #goddess .cv h2 {
   color: #fff;
   font-size: 100px;
   font-weight: 700;
 }
 
-.third-big .all-girl .goddess .cv .name {
+.third-big .all-girl #goddess .cv .name {
   color: #fff;
   font-size: 55px;
 }
 
-.third-big .all-girl .goddess .cv a {
+.third-big .all-girl #goddess .cv a {
   display: inline-block;
   width: 48px;
   height: 48px;
@@ -642,14 +643,14 @@ main .first-big .more-link .right-bottom {
   margin-top: 8px;
 }
 
-.third-big .all-girl .goddess .cv a:hover {
+.third-big .all-girl #goddess .cv a:hover {
   background-image: url(../images/index/icon_sound1.png);
 }
 
 .third-big .all-girl .photo {
   position: absolute;
   bottom: 58px;
-  left: 74px;
+  left: 70px;
   width: 600px;
   height: 120px;
   z-index: 1;
@@ -732,9 +733,391 @@ main .first-big .more-link .right-bottom {
 .third-big .role {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 40px;
   width: 1064px;
   height: 100%;
   background-image: url(../images/index/role_1.png);
+  opacity: 0;
+}
+
+.fourth-big {
+  position: relative;
+  width: 100%;
+  height: 1080px;
+  background-image: url(../images/index/bg_index4.jpg);
+  background-position: center;
+}
+
+.fourth-big #battle {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  width: 550px;
+  height: 80px;
+  margin-left: 100px;
+}
+
+.fourth-big .atlas {
+  position: absolute;
+  top: 310px;
+  left: 50%;
+  width: 1159px;
+  height: 600px;
+  margin-left: -579px;
+}
+
+.fourth-big .atlas .atlas-title {
+  float: left;
+  width: 270px;
+  height: 420px;
+  background-color: #000;
+}
+
+.fourth-big .atlas .atlas-title div {
+  float: right;
+  position: relative;
+  width: 270px;
+  height: 105px;
+  color: #fff;
+  line-height: 105px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #252525;
+  margin-bottom: 2px;
+  cursor: pointer;
+  letter-spacing: 3px;
+}
+
+.fourth-big .atlas .atlas-title div b {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffb400;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 0;
+}
+
+.fourth-big .atlas .atlas-title div:hover {
+  width: 290px;
+  background-color: #ffb400;
+  color: #252525;
+  font-size: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.fourth-big .atlas .atlas-title .active {
+  width: 290px;
+  background-color: #ffb400;
+  color: #252525;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.fourth-big .atlas .atlas-title .active b {
+  position: absolute;
+  top: 50%;
+  right: -14px;
+  opacity: 1;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.fourth-big .atlas .none {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
+}
+
+.fourth-big .atlas .none img {
+  max-height: 100%;
+}
+
+.fourth-big .atlas .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fourth-big .atlas .atlas-content1,
+.fourth-big .atlas .atlas-content2,
+.fourth-big .atlas .atlas-content3 {
+  display: none;
+  float: left;
+  width: 834px;
+  height: 564px;
+  background-color: #fff;
+  padding: 32px;
+  padding-bottom: 23px;
+  padding-right: 23px;
+}
+
+.fourth-big .atlas .atlas-content1 div,
+.fourth-big .atlas .atlas-content2 div,
+.fourth-big .atlas .atlas-content3 div {
+  float: left;
+  width: 397px;
+  height: 266px;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.fourth-big .atlas .atlas-content1 div img,
+.fourth-big .atlas .atlas-content2 div img,
+.fourth-big .atlas .atlas-content3 div img {
+  width: 407px;
+}
+
+.fourth-big .atlas .atlas-content1 .lunbo,
+.fourth-big .atlas .atlas-content2 .lunbo,
+.fourth-big .atlas .atlas-content3 .lunbo {
+  position: relative;
+  width: 834px;
+  height: 564px;
+  background-color: #fff;
+  overflow: hidden;
+  margin: 0;
+}
+
+.fourth-big .atlas .atlas-content1 .lunbo ul,
+.fourth-big .atlas .atlas-content2 .lunbo ul,
+.fourth-big .atlas .atlas-content3 .lunbo ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3520px;
+  height: 600px;
+}
+
+.fourth-big .atlas .atlas-content1 .lunbo ul li,
+.fourth-big .atlas .atlas-content2 .lunbo ul li,
+.fourth-big .atlas .atlas-content3 .lunbo ul li {
+  float: left;
+  width: 880px;
+  height: 600px;
+}
+
+.fourth-big .atlas .atlas-content1 .lunbo ul li img,
+.fourth-big .atlas .atlas-content2 .lunbo ul li img,
+.fourth-big .atlas .atlas-content3 .lunbo ul li img {
+  float: left;
+  width: 397px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.fourth-big .atlas .atlas-content1 .lunbo ul li img:nth-child(1), .fourth-big .atlas .atlas-content1 .lunbo ul li img:nth-child(2),
+.fourth-big .atlas .atlas-content2 .lunbo ul li img:nth-child(1),
+.fourth-big .atlas .atlas-content2 .lunbo ul li img:nth-child(2),
+.fourth-big .atlas .atlas-content3 .lunbo ul li img:nth-child(1),
+.fourth-big .atlas .atlas-content3 .lunbo ul li img:nth-child(2) {
+  margin-bottom: 44px;
+}
+
+.fourth-big .atlas .prev,
+.fourth-big .atlas .next {
+  display: inline-block;
+  position: absolute;
+  right: -35px;
+  top: 0;
+  width: 35px;
+  height: 120px;
+  color: #fff;
+  line-height: 130px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  opacity: .35;
+  margin-top: 0;
+}
+
+.fourth-big .atlas .prev span,
+.fourth-big .atlas .next span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-left: 3px solid #f6f6f6;
+  border-bottom: 3px solid #f6f6f6;
+  margin-left: 10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.fourth-big .atlas .next {
+  top: 120px;
+}
+
+.fourth-big .atlas .next span {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  margin-left: -10px;
+}
+
+.fourth-big .atlas .taggle {
+  display: block;
+}
+
+.fifth-big {
+  position: relative;
+  width: 100%;
+  height: 1080px;
+  background-image: url(../images/index/bg_index5.jpg);
+  background-position: center;
+  overflow: hidden;
+}
+
+.fifth-big .world {
+  position: relative;
+  width: 1000px;
+  height: 514px;
+  margin: 332px auto;
+}
+
+.fifth-big .world .world-in {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.fifth-big .world .world-in ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fifth-big .world .world-in ul li {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1000px;
+  height: 514px;
+}
+
+.fifth-big .world .world-in ul li:first-child {
+  display: block;
+}
+
+.fifth-big .world .world-in ul li .world-left {
+  float: left;
+  width: 430px;
+}
+
+.fifth-big .world .world-in ul li .world-left h3 {
+  width: 269px;
+  height: 53px;
+  color: #fff;
+  line-height: 53px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  background-image: url(../images/index/view_til_bg.png);
+}
+
+.fifth-big .world .world-in ul li .world-left p {
+  width: 430px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.fifth-big .world .world-in ul li .world-right {
+  float: right;
+  width: 499px;
+  height: 505px;
+  padding: 11px 0 0 23px;
+}
+
+.fifth-big .world .left-arrow {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: -120px;
+  width: 46px;
+  height: 46px;
+  border-top: 9px solid #fff;
+  border-left: 9px solid #fff;
+  border-top-left-radius: 8px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.fifth-big .world .left-arrow:hover {
+  border-color: #e3363a;
+}
+
+.fifth-big .world .right-arrow {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: -96px;
+  width: 46px;
+  height: 46px;
+  border-top: 9px solid #fff;
+  border-left: 9px solid #fff;
+  border-top-left-radius: 8px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.fifth-big .world .right-arrow:hover {
+  border-color: #e3363a;
+}
+
+.sixth-big {
+  position: relative;
+  width: 100%;
+  height: 1080px;
+  background-image: url(../images/index/bg_index6.jpg);
+  background-position: center;
+  overflow: hidden;
+}
+
+.sixth-big .time {
+  position: relative;
+  width: 1200px;
+  height: 910px;
+  margin: 0 auto;
+}
+
+.sixth-big .time .timeline {
+  position: absolute;
+  top: 280px;
+  left: 50%;
+  width: 1100px;
+  height: 326px;
+  margin: 0 auto;
+  margin-left: -550px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sixth-big .time .timeline .timeline-in {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 /*# sourceMappingURL=index.css.map */
