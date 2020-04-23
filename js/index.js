@@ -299,7 +299,7 @@ $('.world .right-arrow').on('click', function () {
     if (WorldIn == 4) {
         WorldIn = 0;
     }
-    $('.world-in li').eq(WorldIn).fadeIn(500).siblings('li').fadeOut(500);
+    $('.world-in li').eq(WorldIn).stop().fadeIn(500).siblings('li').stop().fadeOut(500);
 })
 
 $('.world .left-arrow').on('click', function () {
@@ -307,7 +307,143 @@ $('.world .left-arrow').on('click', function () {
     if (WorldIn < 0) {
         WorldIn = 3;
     }
-    $('.world-in li').eq(WorldIn).fadeIn(500).siblings('li').fadeOut(500);
+    $('.world-in li').eq(WorldIn).stop().fadeIn(500).siblings('li').stop().fadeOut(500);
 })
 
 // 第六张大图
+let cssleft = 0
+let timeLeft = cssleft;
+
+function reg() {
+    cssleft = $('.timeline-img').css('left')
+    var str = $('.timeline-img').css('left')
+    cssleft = Number(-(str.replace('px', "")));
+}
+
+$('.timeline .timeline-right').on('mouseenter', function () {
+
+    lineLeft = setInterval(function () {
+        if (timeLeft >= 1057) {
+            clearInterval(lineLeft)
+        }
+
+        $('.timeline-img').css({
+            left: -timeLeft
+        })
+
+        timeLeft += 3;
+    }, 20)
+
+    $('.timeline .timeline-right').on('mouseleave', function () {
+        clearInterval(lineLeft)
+        reg()
+    })
+})
+
+$('.timeline .timeline-left').on('mouseenter', function () {
+    lineLeft = setInterval(function () {
+        if (timeLeft <= 0) {
+            clearInterval(lineLeft)
+        }
+
+        $('.timeline-img').css({
+            left: -timeLeft
+        })
+
+        timeLeft -= 3;
+        // console.log(timeLeft, 1057)
+    }, 20)
+
+    $('.timeline .timeline-left').on('mouseleave', function () {
+        clearInterval(lineLeft)
+        reg()
+    })
+})
+
+// 侧边导航栏
+let firstTop = $('main').offset().top;
+let secondTop = $('.senond-big').offset().top;
+let thirdTop = $('.third-big').offset().top;
+let fourthTop = $('.fourth-big').offset().top;
+let fifthTop = $('.fifth-big').offset().top;
+let sixthTop = $('.sixth-big').offset().top;
+
+function remove() {
+    $('.side-nav li').removeClass('active');
+}
+
+$(document).on('scroll', function () {
+    if ($(document).scrollTop() >= sixthTop) {
+        remove()
+        $('.side-nav li:last-child').addClass('active');
+    } else if ($(document).scrollTop() >= fifthTop) {
+        remove()
+        $('.side-nav li:nth-child(5)').addClass('active');
+    } else if ($(document).scrollTop() >= fourthTop) {
+        remove()
+        $('.side-nav li:nth-child(4)').addClass('active');
+    } else if ($(document).scrollTop() >= thirdTop) {
+        remove()
+        $('.side-nav li:nth-child(3)').addClass('active');
+    } else if ($(document).scrollTop() >= secondTop) {
+        remove()
+        $('.side-nav li:nth-child(2)').addClass('active');
+    } else {
+        remove()
+        $('.side-nav li:first-child').addClass('active');
+    }
+})
+
+$('.side-nav li').on('click', function () {
+    $('.side-nav li').removeClass('active');
+    $(this).addClass('active');
+    let shu = $(this).index()
+    let bodychild = $('body').children().eq(shu).offset().top + 1;
+    $('html,body').stop().animate({
+        scrollTop: bodychild
+    }, 300)
+})
+
+// 官方QQ
+let qqs = document.querySelector('.official-qqs');
+let inner = document.querySelector('.official-inner');
+let top2 = 0;
+qqs.addEventListener('mousewheel', function (e) {
+    if (e.wheelDelta < 0) {
+        if (top2 >= 0 && top2 <= 134) {
+            top2 += 12
+        }
+        inner.style.top = -top2 + 'px'
+    } else if (e.wheelDelta > 0) {
+        if (top2 > 0 && top2 <= 144) {
+            top2 -= 12
+        }
+        inner.style.top = -top2 + 'px'
+    }
+})
+
+$('.official .official-hide').on('click', function () {
+    $('.close-open .official-close').removeClass('active');
+    $('.official').animate({
+        right: -190
+    }, 500)
+})
+
+$('.official-close div').on('click', function () {
+    $('.close-open .official-close').addClass('active');
+    $('.official').animate({
+        right: 0
+    }, 500)
+})
+
+$('.official-icon .weixin').on('click', function () {
+    $('.official-qqs').addClass('none');
+    $('.scroll-mouse').addClass('none');
+    $('.official-weixing').removeClass('none');
+})
+
+$('.official-icon .QQ').on('click', function () {
+    $('.official-qqs').removeClass('none');
+    $('.scroll-mouse').removeClass('none');
+    $('.official-weixing').addClass('none');
+})

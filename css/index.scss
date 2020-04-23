@@ -23,6 +23,40 @@
     }
 }
 
+@keyframes timeline1 {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.9);
+        opacity: .5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes timeline2 {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.9);
+        opacity: .5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 // 顶部导航与第一张大图
 main {
     background-image: url(../images/index/bg_index1.jpg);
@@ -241,6 +275,41 @@ main {
                 right: -1px;
                 bottom: -1px;
             }
+        }
+
+        .PV {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .5);
+            display: block;
+            z-index: 200;
+
+            .close-Pv {
+                position: absolute;
+                top: 10%;
+                right: 20%;
+                cursor: pointer;
+            }
+
+            .PV-video {
+                position: absolute;
+                width: 60%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                video {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .none {
+            display: none;
         }
     }
 }
@@ -1034,15 +1103,538 @@ main {
             width: 1100px;
             height: 326px;
             margin: 0 auto;
-            margin-left: -550px;
+            margin-left: -560px;
             padding: 10px;
             background-color: hsla(0, 0%, 100%, .3);
 
             .timeline-in {
+                position: relative;
                 width: 100%;
                 height: 100%;
                 overflow: hidden;
+
+                .timeline-img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 2156px;
+                    height: 326px;
+                    background-image: url(../images/index/timesLine.jpg);
+
+                    img {
+
+                        &:first-child {
+                            position: absolute;
+                            left: 505px;
+                            top: 15px;
+                            animation: timeline1 2s infinite 0s ease;
+                        }
+
+                        &:nth-child(2) {
+                            position: absolute;
+                            left: 590px;
+                            bottom: 6px;
+                            animation: timeline2 1.8s infinite .8s ease;
+                        }
+
+                        &:nth-child(3) {
+                            position: absolute;
+                            left: 1045px;
+                            top: 0;
+                            animation: timeline1 2s infinite 0s ease;
+                        }
+
+                        &:last-child {
+                            position: absolute;
+                            left: 1330px;
+                            top: 140px;
+                            animation: timeline2 1.8s infinite .8s ease;
+                        }
+                    }
+                }
+            }
+
+            span {
+                position: absolute;
+                top: 50%;
+                display: inline-block;
+                width: 36px;
+                height: 118px;
+                text-align: center;
+                line-height: 118px;
+                background-color: #ffb400;
+                margin-top: -59px;
+                cursor: pointer;
+
+                i {
+                    display: inline-block;
+                    width: 14px;
+                    height: 14px;
+                    border-top: 2px solid #000;
+                    border-left: 2px solid #000;
+                }
+            }
+
+            .timeline-left {
+                left: -36px;
+
+                i {
+                    margin-left: 8px;
+                    transform: rotate(-45deg);
+                }
+
+                &:hover {
+
+                    i {
+                        border-color: #fff;
+                    }
+                }
+            }
+
+            .timeline-right {
+                right: -36px;
+
+                i {
+                    margin-right: 8px;
+                    transform: rotate(135deg);
+                }
+
+                &:hover {
+
+                    i {
+                        border-color: #fff;
+                    }
+                }
+            }
+        }
+
+        .time-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 100%;
+            height: 225px;
+            text-align: center;
+            margin-left: -600px;
+
+            a {
+                display: inline-block;
+                width: 328px;
+                height: 221px;
+                margin: 0 110px;
+
+                &:first-child {
+                    background-image: url(../images/index/btn_juqing.png);
+                }
+
+                &:last-child {
+                    background-image: url(../images/index/btn_tasuodian.png);
+                }
             }
         }
     }
+}
+
+// 首页底部
+.footer {
+    width: 100%;
+    height: 178px;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+
+    .center {
+        width: 1050px;
+        height: 100%;
+        font-size: 12px;
+        margin: 0 auto;
+
+        .center-top {
+            line-height: 25px;
+            border-bottom: 1px solid #fff;
+            margin: 10px auto;
+            overflow: hidden;
+
+            ul {
+                float: left;
+
+                li {
+                    float: left;
+
+                    a {
+                        float: left;
+                        color: #fff;
+                    }
+
+                    span {
+                        float: left;
+                        color: #fff;
+                        margin: 0 3px;
+                    }
+                }
+            }
+
+            p {
+                float: right;
+                color: #fff;
+            }
+        }
+
+        .center-align {
+            margin: 10px auto;
+            overflow: hidden;
+
+            p {
+                line-height: 22px;
+                color: #fff;
+            }
+        }
+
+        .center-bottom {
+            margin: 10px auto;
+            overflow: hidden;
+
+            p {
+                float: left;
+                color: #ffb161;
+                line-height: 25px;
+            }
+
+            a {
+                color: #fff;
+                margin: 0 5px;
+            }
+        }
+    }
+}
+
+// 侧边导航栏
+.side-nav {
+    position: fixed;
+    top: 16%;
+    right: 2%;
+    z-index: 99;
+
+    .line {
+        position: absolute;
+        top: 14px;
+        right: 0;
+        width: 1px;
+        height: 200px;
+        border-right: 1px solid hsla(0, 0%, 100%, .4);
+    }
+
+    ul {
+        li {
+            position: relative;
+            display: block;
+            cursor: pointer;
+
+            a {
+                display: block;
+                text-align: right;
+                color: #fff;
+                font-size: 14px;
+                padding: 6px 30px 6px 5px;
+                margin: 10px 0;
+            }
+
+            div {
+                position: absolute;
+                top: 50%;
+                right: -9px;
+                width: 6px;
+                height: 6px;
+                background-color: rgba(0, 0, 0, .4);
+                border: 6px solid hsla(0, 0%, 100%, .6);
+                border-radius: 50%;
+                transform: translateY(-50%);
+
+                span {
+                    position: absolute;
+                    top: 50%;
+                    left: -15px;
+                    transform: translateY(-50%);
+                    width: 0;
+                    height: 0;
+                    border-color: transparent #ffc000 transparent transparent;
+                    border-style: solid;
+                    border-width: 5px 8px;
+                    opacity: 0;
+                }
+            }
+        }
+
+        .active {
+            a {
+                font-size: 16px;
+            }
+
+            div {
+                right: -11px;
+                width: 22px;
+                height: 22px;
+                background-color: #ffc000;
+                border: 0;
+                transition: all .5s;
+
+                span {
+                    opacity: 1;
+                    transition: all .5s;
+                }
+            }
+        }
+    }
+}
+
+// 缩放功能
+.close-open {
+
+    // 官方QQ打开
+    .official {
+        position: fixed;
+        right: 0px;
+        // -190px
+        top: 44%;
+        width: 189px;
+        height: 333px;
+        padding-left: 10px;
+        z-index: 99;
+        background-image: url(../images/index/float_box1.png);
+
+        .official-in {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            .official-qqs {
+                position: absolute;
+                left: 0;
+                top: 20px;
+                width: 100%;
+                height: 195px;
+                text-align: center;
+                cursor: n-resize;
+                overflow: hidden;
+
+                .official-inner {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 326px;
+
+                    .txt {
+                        width: 120px;
+                        height: 18px;
+                        border-left: 1px solid #ffc000;
+                        border-right: 1px solid #ffc000;
+                        padding-top: 2px;
+                        margin: 10px auto;
+
+                        p {
+                            height: 14px;
+                            color: #ffc000;
+                            line-height: 14px;
+                            font-size: 14px;
+                            font-weight: 700;
+                            border-left: 3px solid #ffc000;
+                            border-right: 3px solid #ffc000;
+                        }
+                    }
+
+                    dl {
+                        font-size: 12px;
+                        color: #fff;
+                        line-height: 15.5px;
+                    }
+                }
+            }
+
+            .scroll-mouse {
+                position: absolute;
+                bottom: 90px;
+                left: 50%;
+                margin-left: -10px;
+                width: 20px;
+                height: 20px;
+                border-bottom: 2px solid #fff;
+                border-left: 2px solid #fff;
+                transform: rotate(-50deg) skew(-10deg);
+                cursor: n-resize;
+
+                span {
+                    position: absolute;
+                    bottom: 5px;
+                    left: 5px;
+                    width: 20px;
+                    height: 20px;
+                    border-bottom: 2px solid #909699;
+                    border-left: 2px solid #909699;
+                }
+            }
+
+            .official-icon {
+                position: absolute;
+                top: 254px;
+                left: 20px;
+                width: 145px;
+                height: 30px;
+                z-index: 1;
+
+                a {
+                    display: inline-block;
+                    width: 32px;
+                    height: 30px;
+                    background-image: url(../images/index/focus_icon.png);
+
+                    &:nth-child(2) {
+                        background-position: -37px 0;
+
+                        &:hover {
+                            background-position: -37px -30px;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        background-position: -76px 0;
+
+                        &:hover {
+                            background-position: -76px -30px;
+                        }
+                    }
+
+                    &:last-child {
+                        background-position: -114px 0;
+
+                        &:hover {
+                            background-position: -114px -30px;
+                        }
+                    }
+
+                    &:hover {
+                        background-position: 0 -30px;
+                    }
+                }
+            }
+
+            .official-hide {
+                position: absolute;
+                left: 50%;
+                bottom: 3px;
+                width: 30px;
+                height: 30px;
+                margin-left: -9px;
+                cursor: pointer;
+                transform: rotate(45deg);
+            }
+
+            .official-weixing {
+                position: absolute;
+                left: 0;
+                top: 20px;
+                width: 100%;
+                text-align: center;
+
+                h3 {
+                    width: 113px;
+                    height: 37px;
+                    color: #fff;
+                    line-height: 37px;
+                    font-size: 15px;
+                    background-image: url(../images/index/focus_tilbg.png);
+                    margin: 10px auto;
+                }
+
+                .weixing-code {
+                    width: 113px;
+                    height: 113px;
+                    overflow: hidden;
+                    margin: 10px auto;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .weixing-txt {
+                    width: 120px;
+                    height: 18px;
+                    padding-top: 2px;
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    margin: 10px auto;
+
+                    p {
+                        height: 13px;
+                        color: #fff;
+                        line-height: 13px;
+                        text-align: center;
+                        font-size: 13px;
+                        border-left: 3px solid #fff;
+                        border-right: 3px solid #fff;
+                        margin: 0 3px;
+                    }
+                }
+            }
+
+            .none {
+                display: none;
+            }
+        }
+    }
+
+    // 官方QQ缩进
+    .official-close {
+        position: absolute;
+        right: 0;
+        top: 60%;
+        width: 83px;
+        height: 92px;
+        cursor: pointer;
+        background-image: url(../images/index/float_btn.png);
+
+        div {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 24px;
+            height: 24px;
+            background-color: hsla(0, 0%, 100%, .4);
+            box-shadow: 0 0 5px #000;
+            margin: -10px 0 0 -8px;
+            transform: rotate(45deg);
+
+            span {
+                position: absolute;
+                left: 5px;
+                bottom: 5px;
+                width: 14px;
+                height: 14px;
+                border-bottom: 2px solid #fff;
+                border-left: 2px solid #fff;
+            }
+        }
+    }
+
+    .active {
+        display: none;
+    }
+}
+
+// 合作媒体
+.media {
+    position: fixed;
+    right: 0;
+    top: 88%;
+    width: 83px;
+    height: 92px;
+    color: #fff;
+    line-height: 20px;
+    font-size: 16px;
+    padding: 26px 0 0 6px;
+    text-align: center;
+    background-image: url(../images/index/float_btn.png);
+    z-index: 99;
+    cursor: pointer;
 }
