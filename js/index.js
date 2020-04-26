@@ -1,20 +1,71 @@
-// 调用函数
-function border(zhe) {
+// 顶部导航栏
+function yidong() {
     $('.nav li').removeClass('border');
-    zhe.addClass('border');
+    $('.nav li:first-child').addClass('border');
+    $('.others').removeClass('big-none');
+    $('#griffin').addClass('big-none');
+    $('#Atlas').addClass('big-none');
 }
 
-// 顶部导航栏
-$('.nav li:first-child').on('click', function () {
-    border($(this));
+$('.nav li:nth-child(5)').on('click', function () {
+    yidong()
+    $('html,body').stop().animate({
+        scrollTop: fifthTop + 1
+    }, 300)
+})
+
+$('.nav li:nth-child(6)').on('click', function () {
+    yidong()
+    $('html,body').stop().animate({
+        scrollTop: sixthTop + 1
+    }, 300)
 })
 
 $('.nav li:nth-child(2)').on('click', function () {
-    border($(this));
+    $('.nav li').removeClass('border');
+    $(this).addClass('border');
+    $('#griffin').removeClass('big-none');
+    $('.others').addClass('big-none');
+    $('#Atlas').addClass('big-none');
+})
+
+$('.nav li:first-child').on('click', function () {
+    $('.nav li').removeClass('border');
+    $(this).addClass('border');
+    $('.others').removeClass('big-none');
+    $('#griffin').addClass('big-none');
 })
 
 $('.nav li:nth-child(4)').on('click', function () {
-    border($(this));
+    $('.nav li').removeClass('border');
+    $(this).addClass('border');
+    $('#Atlas').removeClass('big-none');
+    $('.others').addClass('big-none');
+})
+
+// 第一张大图视频
+let myVideo = document.querySelector('.PV-video video');
+let PVPlay = document.querySelector('.first-big .play');
+let PV = document.querySelector('.PV');
+let closePV = document.querySelector('.PV .close-Pv');
+
+function playVid() {
+    myVideo.play();
+}
+
+function pauseVid() {
+    myVideo.pause();
+}
+
+PVPlay.addEventListener('click', function () {
+    PV.classList.remove('none');
+    playVid()
+})
+
+closePV.addEventListener('click', function () {
+    PV.classList.add('none');
+    pauseVid()
+    myVideo.currentTime = 0
 })
 
 // 第二张大图轮播图
@@ -39,6 +90,22 @@ $('.new-top span').on('mouseenter', function () {
     let index = $(this).index();
     $('.new-bottom div').removeClass('taggle');
     $(`.new-bottom .number${index+1}`).addClass('taggle');
+})
+
+function more() {
+    $('.nav li').removeClass('border');
+    $('.nav li:nth-child(2)').addClass('border');
+    $('#griffin').removeClass('big-none');
+    $('.others').addClass('big-none');
+    $('#Atlas').addClass('big-none');
+}
+
+$('#Griffin').on('click', function () {
+    more()
+})
+
+$('.senond-big .new-box>a').on('click', function () {
+    more()
 })
 
 // 第三张大图
@@ -71,6 +138,19 @@ var speak = [{
 }]
 
 var name1 = ['崛江由衣', '茅野爱衣', '户松遥', '田村由加莉', '野中蓝', '和气杏未'];
+let address = [{
+    'audio': './audio/index/Rifle.mp3'
+}, {
+    'audio': './audio/index/kar98k.mp3'
+}, {
+    'audio': './audio/index/M4A1_GAIN_JP.mp3'
+}, {
+    'audio': './audio/index/SOP2.mp3'
+}, {
+    'audio': './audio/index/HK416_DIALOGUE1_JP.mp3'
+}, {
+    'audio': './audio/index/AUG.mp3'
+}]
 
 function girl(num) {
     $('div').remove('#goddess');
@@ -92,6 +172,9 @@ function girl(num) {
                 <h2>CV</h2>
                 <div class="name">${name1[num]}</div>
                 <a href="javascript:;" title="点击播放"></a>
+                <audio>
+                    <source src="${address[num].audio}">
+                </audio>
             </div>
         </div>
     `)
@@ -105,7 +188,17 @@ function girl(num) {
     })
 }
 
+function audiocv() {
+    audioplay = document.querySelector('.cv a');
+    audio = document.querySelector('.cv audio');
+    audioplay.addEventListener('click', function () {
+        audio.play()
+    })
+}
+
 // 第三张大图轮播
+let audioplay = document.querySelector('.cv a');
+let audio = document.querySelector('.cv audio');
 let dianNum = 0;
 $('.photo-in li').on('click', function () {
     dianNum = $(this).index();
@@ -113,6 +206,7 @@ $('.photo-in li').on('click', function () {
     $(this).addClass('bright');
     girl(dianNum)
     fadeIn()
+    audiocv()
 })
 
 $('.photo .right').on('click', function () {
@@ -131,6 +225,7 @@ $('.photo .right').on('click', function () {
     }
     girl(dianNum)
     fadeIn()
+    audiocv()
 })
 
 $('.photo .left').on('click', function () {
@@ -147,7 +242,10 @@ $('.photo .left').on('click', function () {
     }
     girl(dianNum)
     fadeIn()
+    audiocv()
 })
+
+audiocv()
 
 // 第四张大图
 $('.atlas-content1 div').on('click', function () {
@@ -292,6 +390,13 @@ $('.atlas .atlas-title div').on('click', function () {
     }
 })
 
+$('#battle').on('click', function () {
+    $('.nav li').removeClass('border');
+    $('.nav li:nth-child(4)').addClass('border');
+    $('#Atlas').removeClass('big-none');
+    $('.others').addClass('big-none');
+})
+
 // 第五张大图
 let WorldIn = 0
 $('.world .right-arrow').on('click', function () {
@@ -409,9 +514,11 @@ let qqs = document.querySelector('.official-qqs');
 let inner = document.querySelector('.official-inner');
 let top2 = 0;
 qqs.addEventListener('mousewheel', function (e) {
+    e.returnValue = false
     if (e.wheelDelta < 0) {
         if (top2 >= 0 && top2 <= 134) {
             top2 += 12
+            console.log(top2, e.returnValue)
         }
         inner.style.top = -top2 + 'px'
     } else if (e.wheelDelta > 0) {
@@ -446,4 +553,44 @@ $('.official-icon .QQ').on('click', function () {
     $('.official-qqs').removeClass('none');
     $('.scroll-mouse').removeClass('none');
     $('.official-weixing').addClass('none');
+})
+
+// 顶部导航栏情报局
+$('.griffin .container-menu li').on('click', function () {
+    $('.griffin .container-menu li').removeClass('active');
+    $(this).addClass('active');
+    let num2 = $(this).index();
+    $('.griffin-group').removeClass('active');
+    $(`.griffin-group${num2+1}`).addClass('active');
+})
+
+$('.con-follow a:first-child').on('mouseenter', function () {
+    $('.follow_btn img').css({
+        display: 'block'
+    })
+})
+
+$('.con-follow a:first-child').on('mouseleave', function () {
+    $('.follow_btn img').css({
+        display: 'none'
+    })
+})
+
+// 第三版块图册
+$('.Atlas-menu li').on('click', function () {
+    let index2 = $(this).index();
+    $('.Atlas-menu li').removeClass('menu');
+    $(this).addClass('menu');
+    $('.Atlas-group').removeClass('group-block');
+    $(`.Atlas-group${index2+1}`).addClass('group-block');
+})
+
+$('.Atlas-group .group-item').on('click', function () {
+    let itemImg = $(this).children().eq(0).html();
+    $('.mas').removeClass('mas-none');
+    $('.mas').html(itemImg);
+
+    $('.mas img').on('click', function () {
+        $('.mas').addClass('mas-none');
+    })
 })

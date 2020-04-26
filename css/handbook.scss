@@ -1,0 +1,219 @@
+body {
+    background-image: url(../images/handbook/Bg_new.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+// 头部
+.head {
+    position: relative;
+    height: 200px;
+    background-image: url(../images/handbook/GFWiki_LOGO_Filled.svg);
+    background-repeat: no-repeat, repeat-x;
+    background-size: 450px, 100%;
+    background-position: left top, left top;
+
+    .a-index {
+        float: left;
+        display: inline-block;
+        width: 450px;
+        height: 128px;
+    }
+
+    .head-left {
+        position: absolute;
+        bottom: 0;
+        left: 178px;
+        width: 84px;
+        height: 40px;
+        color: #a55858;
+        font-size: 13px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #333;
+
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 100%;
+            cursor: pointer;
+
+            &:first-child {
+                color: #fff;
+                background-color: #3d3d3d;
+            }
+        }
+    }
+
+    .head-personal {
+        float: right;
+        width: 132px;
+        height: 28px;
+        line-height: 28px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 25px);
+        background-color: rgba(85, 85, 85, 0.67);
+
+        a {
+            float: right;
+            color: #f4c430;
+            font-size: 12px;
+            margin-right: 10px;
+
+            &:first-child {
+                color: #f28500;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .head-read {
+        position: absolute;
+        bottom: 0;
+        right: 368px;
+        width: 190px;
+        height: 40px;
+        color: #969696;
+        font-size: 13px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #333;
+
+        span {
+            display: inline-block;
+            height: 100%;
+            padding: 0 6px;
+            cursor: pointer;
+
+            &:first-child {
+                color: #fff;
+                background-color: #3d3d3d;
+            }
+        }
+    }
+
+    .head-search {
+        position: absolute;
+        right: 18px;
+        bottom: 4px;
+        width: 332px;
+        height: 24px;
+        border: 1px solid #ffebad;
+        background-color: #444444;
+
+        input {
+            width: 304px;
+            height: 100%;
+            color: #fff;
+            background-color: #444444;
+            border: none;
+            padding-left: 2px;
+        }
+
+        a {
+            float: right;
+            width: 22px;
+            height: 100%;
+            background-image: url(../images/handbook/search.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        &:hover {
+            border: 1px solid transparent;
+            transition: all .4s;
+        }
+    }
+}
+
+// 内容
+.mw-body {
+    width: 100%;
+    height: 1000px;
+
+    #Menu {
+        width: 168px;
+
+        ul {
+            width: 100%;
+            list-style: none none;
+            background-color: rgba(20, 20, 20, 0.6);
+            border-top: 2px solid #f4c430;
+            border-bottom-right-radius: 5px;
+            box-shadow: 2px 0 5px black, 0 2px 5px black;
+
+            li {
+                color: #eaeaea;
+                border-bottom: 1px solid #8c7729;
+                cursor: pointer;
+
+                span {
+                    display: block;
+                    position: relative;
+                    font-size: 14px;
+                    padding: 7px 0px;
+                    padding-left: 18px;
+
+                    i {
+                        position: absolute;
+                        top: 2px;
+                        left: 75px;
+                        font-size: 12px;
+                    }
+
+                    b {
+                        position: absolute;
+                        top: 2px;
+                        left: 89px;
+                        color: red;
+                        font-size: 12px;
+                    }
+                }
+
+                .child::after {
+                    display: inline-block;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    content: "";
+                    border: 6px solid #eaeaea;
+                    border-top: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    border-bottom: 6px solid transparent;
+                    border-radius: 2px;
+                    margin-top: -6px;
+                }
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+
+                &:hover {
+                    color: #000;
+                    background-color: #f4c430;
+                    transition: all .5s;
+
+                    .child::after {
+                        border-left: 6px solid #000;
+                    }
+                }
+            }
+        }
+
+        p {
+            color: #f4c430;
+            font-size: 16px;
+            font-weight: bold;
+            background-image: linear-gradient(225deg, #f4c430 5px, transparent 6px);
+            background-color: rgba(30, 30, 30, 0.6);
+            box-shadow: 2px 0 5px black;
+            padding: 8px 10px;
+            margin: 0px;
+            margin-top: 8px;
+        }
+    }
+}

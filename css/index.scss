@@ -57,16 +57,38 @@
     }
 }
 
+@keyframes tagDown {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.9);
+        opacity: .6;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+// 第一部分——首页
+
 // 顶部导航与第一张大图
-main {
+.index {
+    position: relative;
     background-image: url(../images/index/bg_index1.jpg);
     background-position: center;
+    z-index: 1;
 
     // 顶部导航栏
     .top-nav {
         width: 100%;
         height: 100px;
         background-color: #191919;
+        z-index: 2;
 
         .top-center {
             height: 100px;
@@ -95,6 +117,10 @@ main {
                     margin-right: 22px;
                     cursor: pointer;
 
+                    a {
+                        color: #fff;
+                    }
+
                     &:last-child {
                         line-height: 30px;
 
@@ -109,6 +135,10 @@ main {
 
                     &:hover {
                         color: #ffc000;
+
+                        a {
+                            color: #ffc000;
+                        }
                     }
                 }
 
@@ -1235,79 +1265,6 @@ main {
     }
 }
 
-// 首页底部
-.footer {
-    width: 100%;
-    height: 178px;
-    background: #000;
-    color: #fff;
-    overflow: hidden;
-
-    .center {
-        width: 1050px;
-        height: 100%;
-        font-size: 12px;
-        margin: 0 auto;
-
-        .center-top {
-            line-height: 25px;
-            border-bottom: 1px solid #fff;
-            margin: 10px auto;
-            overflow: hidden;
-
-            ul {
-                float: left;
-
-                li {
-                    float: left;
-
-                    a {
-                        float: left;
-                        color: #fff;
-                    }
-
-                    span {
-                        float: left;
-                        color: #fff;
-                        margin: 0 3px;
-                    }
-                }
-            }
-
-            p {
-                float: right;
-                color: #fff;
-            }
-        }
-
-        .center-align {
-            margin: 10px auto;
-            overflow: hidden;
-
-            p {
-                line-height: 22px;
-                color: #fff;
-            }
-        }
-
-        .center-bottom {
-            margin: 10px auto;
-            overflow: hidden;
-
-            p {
-                float: left;
-                color: #ffb161;
-                line-height: 25px;
-            }
-
-            a {
-                color: #fff;
-                margin: 0 5px;
-            }
-        }
-    }
-}
-
 // 侧边导航栏
 .side-nav {
     position: fixed;
@@ -1586,13 +1543,14 @@ main {
 
     // 官方QQ缩进
     .official-close {
-        position: absolute;
+        position: fixed;
         right: 0;
         top: 60%;
         width: 83px;
         height: 92px;
         cursor: pointer;
         background-image: url(../images/index/float_btn.png);
+        z-index: 99;
 
         div {
             position: absolute;
@@ -1637,4 +1595,468 @@ main {
     background-image: url(../images/index/float_btn.png);
     z-index: 99;
     cursor: pointer;
+}
+
+.big-none {
+    display: none;
+}
+
+// 首页底部
+.footer {
+    width: 100%;
+    height: 178px;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+
+    .center {
+        width: 1050px;
+        height: 100%;
+        font-size: 12px;
+        margin: 0 auto;
+
+        .center-top {
+            line-height: 25px;
+            border-bottom: 1px solid #fff;
+            margin: 10px auto;
+            overflow: hidden;
+
+            ul {
+                float: left;
+
+                li {
+                    float: left;
+
+                    a {
+                        float: left;
+                        color: #fff;
+                    }
+
+                    span {
+                        float: left;
+                        color: #fff;
+                        margin: 0 3px;
+                    }
+                }
+            }
+
+            p {
+                float: right;
+                color: #fff;
+            }
+        }
+
+        .center-align {
+            margin: 10px auto;
+            overflow: hidden;
+
+            p {
+                line-height: 22px;
+                color: #fff;
+            }
+        }
+
+        .center-bottom {
+            margin: 10px auto;
+            overflow: hidden;
+
+            p {
+                float: left;
+                color: #ffb161;
+                line-height: 25px;
+            }
+
+            a {
+                color: #fff;
+                margin: 0 5px;
+            }
+        }
+    }
+}
+
+// 第二部分——情报局
+#griffin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .griffin-in {
+        background-image: url(../images/intelligence/bg_news.jpg);
+        background-position: top;
+        background-repeat: no-repeat;
+
+        .griffin {
+            width: 100%;
+            height: 100%;
+            padding-top: 292px;
+
+            .griffin-main {
+                position: relative;
+                width: 1113px;
+                height: 840px;
+                margin: 0 auto;
+
+                .griffin-container {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 948px;
+                    height: 840px;
+                    background-color: #a19891;
+
+                    .container-menu {
+                        width: 100%;
+                        height: 70px;
+                        line-height: 70px;
+                        background-color: #40352d;
+
+                        li {
+                            float: left;
+                            width: 184px;
+                            height: 100%;
+                            color: #fff;
+                            font-size: 20px;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+
+                        .active {
+                            background-image: url(../images/intelligence/menu_bg1.png);
+                        }
+                    }
+
+                    .griffin-group1,
+                    .griffin-group2,
+                    .griffin-group3 {
+                        display: none;
+                        position: absolute;
+                        top: 70px;
+                        left: 0;
+                        width: 100%;
+                        height: 770px;
+
+                        ul {
+                            list-style: none;
+                            padding: 0 60px;
+
+                            li {
+                                display: block;
+                                width: 100%;
+                                height: 60px;
+                                color: #1a1612;
+                                line-height: 60px;
+                                font-size: 16px;
+                                border-bottom: 1px dashed #7f7772;
+                                cursor: pointer;
+
+                                p {
+                                    width: 84%;
+                                    float: left;
+                                }
+
+                                time {
+                                    float: right;
+                                    width: 15%;
+                                    text-align: right;
+                                    margin-right: 8px;
+                                }
+                            }
+                        }
+
+                        .pagination {
+                            position: relative;
+                            font-weight: 700;
+                            text-align: center;
+                            padding: 2px 5px;
+                            margin-top: 20px;
+
+                            button {
+                                position: absolute;
+                                top: 2px;
+                                width: 32px;
+                                height: 32px;
+                                color: #fff;
+                                line-height: 32px;
+                                text-align: center;
+                                border: 2px solid #c3b5a9;
+                                background-color: #584c43;
+                                font-size: 16px;
+                                margin: 0 4px;
+
+                                i {
+                                    display: inline-block;
+                                    width: 8px;
+                                    height: 8px;
+                                    border-top: 2px solid #fff;
+                                    border-left: 2px solid #fff;
+                                }
+                            }
+
+                            .btn-left {
+                                left: 262px;
+
+                                i {
+                                    transform: rotate(-45deg);
+                                    margin-bottom: 2px;
+                                    margin-left: 2px;
+                                }
+                            }
+
+                            .btn-right {
+                                right: 262px;
+
+                                i {
+                                    transform: rotate(135deg);
+                                    margin-bottom: 2px;
+                                    margin-right: 2px;
+                                }
+                            }
+
+                            ul {
+                                li {
+                                    display: inline-block;
+                                    width: 28px;
+                                    height: 28px;
+                                    color: #fff;
+                                    line-height: 28px;
+                                    text-align: center;
+                                    border: 2px solid #c3b5a9;
+                                    background-color: #584c43;
+                                    font-size: 16px;
+                                    margin: 0 4px;
+
+                                    &:first-child {
+                                        background-color: #aa3335;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .griffin-group3 {
+                        .pagination {
+                            .btn-left {
+                                left: 324px;
+                            }
+
+                            .btn-right {
+                                right: 324px;
+                            }
+                        }
+                    }
+
+                    .active {
+                        display: block;
+                    }
+                }
+
+                .griffin-con {
+                    width: 165px;
+                    height: 414px;
+                    float: right;
+                    margin-top: 70px;
+                    padding-top: 25px;
+                    background-image: url(../images/intelligence/bg_rt.png);
+
+                    .con-code {
+                        width: 115px;
+                        height: 160px;
+                        margin: 0 auto;
+
+                        h3 {
+                            height: 36px;
+                            color: #fff;
+                            line-height: 36px;
+                            font-weight: 400;
+                            font-size: 16px;
+                            text-align: center;
+                            margin-bottom: 10px;
+                        }
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .con-follow {
+                        width: 100%;
+                        text-align: center;
+                        margin-top: 12px;
+
+                        .follow_btn {
+                            position: relative;
+
+                            a {
+                                display: inline-block;
+                                width: 44px;
+                                height: 46px;
+                                margin: 0 7px;
+
+                                &:first-child {
+                                    background-image: url(../images/intelligence/btn_weixin.png);
+
+                                    &:hover {
+                                        background-position: 0 45px;
+                                    }
+                                }
+
+                                &:last-child {
+                                    background-image: url(../images/intelligence/btn_weibo.png);
+
+                                    &:hover {
+                                        background-position: 0 45px;
+                                    }
+                                }
+                            }
+
+                            img {
+                                display: none;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                top: 45px;
+                                left: -78px;
+                            }
+                        }
+                    }
+
+                    .qq {
+                        color: hsla(0, 0%, 100%, .7);
+                        font-size: 14px;
+                        text-align: center;
+                        margin-top: 10px;
+                        text-shadow: 0 0 2px #3c332f, 0 0 3px #3c332f, 0 0 4px #3c332f, 0 0 5px #3c332f, 0 0 6px #3c332f;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 第三部分——图册
+#Atlas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .Atlas-in {
+        background-image: url(../images/atlas/bg_av.jpg);
+        background-position: top;
+        background-repeat: no-repeat;
+
+        .Atlas {
+            width: 100%;
+            height: 100%;
+            padding-top: 292px;
+
+            .Atlas-main {
+                position: relative;
+                width: 1080px;
+                height: 1009px;
+                margin: 0 auto;
+
+                .Atlas-menu {
+                    width: 100%;
+                    height: 72px;
+                    line-height: 72px;
+                    background-color: #40352d;
+
+                    li {
+                        float: left;
+                        width: 159px;
+                        height: 100%;
+                        color: #ccc;
+                        font-size: 20px;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+
+                    .menu {
+                        color: #854602;
+                        background-image: url(../images/atlas/menu_bg2.png);
+                    }
+                }
+
+                .Atlas-group {
+                    display: none;
+                    position: relative;
+                    width: 100%;
+                    background-color: #a19891;
+                    padding-bottom: 100px;
+                    overflow: auto;
+
+                    .group-item {
+                        float: left;
+                        width: 218px;
+                        height: 209px;
+                        background-image: url(../images/atlas/av_imgbg.png);
+                        margin: 25px 15px;
+                        padding: 10px;
+                        cursor: pointer;
+
+                        .item-img {
+                            width: 218px;
+                            height: 149px;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+                        h3 {
+                            width: 100%;
+                            height: 30px;
+                            color: #40352d;
+                            line-height: 30px;
+                            font-size: 18px;
+                            font-weight: 400;
+                            overflow: hidden;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+
+                .group-block {
+                    display: block;
+                }
+
+                .Atlas-tag {
+                    position: absolute;
+                    bottom: 45px;
+                    left: 50%;
+                    width: 71px;
+                    height: 69px;
+                    margin-left: -35px;
+                    cursor: pointer;
+                    background-image: url(../images/atlas/tag_down.png);
+                    animation: tagDown 1s infinite linear;
+                }
+            }
+
+            .mas {
+                display: flex;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, .3);
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    max-height: 100%;
+                }
+            }
+
+            .mas-none {
+                display: none;
+            }
+        }
+    }
 }
