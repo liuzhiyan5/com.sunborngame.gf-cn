@@ -1,0 +1,747 @@
+body {
+  background-image: url(../images/handbook/Bg_new.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.head {
+  position: relative;
+  height: 200px;
+  background-image: url(../images/handbook/GFWiki_LOGO_Filled.svg);
+  background-repeat: no-repeat, repeat-x;
+  background-size: 450px, 100%;
+  background-position: left top, left top;
+}
+
+.head .a-index {
+  float: left;
+  width: 450px;
+  height: 128px;
+}
+
+.head .head-left {
+  position: absolute;
+  bottom: 0;
+  left: 178px;
+  width: 84px;
+  height: 40px;
+  color: #a55858;
+  font-size: 13px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #333;
+}
+
+.head .head-left span {
+  display: inline-block;
+  width: 40px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.head .head-left span:first-child {
+  color: #fff;
+  background-color: #3d3d3d;
+}
+
+.head .head-personal {
+  float: right;
+  width: 132px;
+  height: 28px;
+  line-height: 28px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 25px);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 25px);
+  background-color: rgba(85, 85, 85, 0.67);
+}
+
+.head .head-personal a {
+  float: right;
+  color: #f4c430;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.head .head-personal a:first-child {
+  color: #f28500;
+}
+
+.head .head-personal a:hover {
+  text-decoration: underline;
+}
+
+.head .head-read {
+  position: absolute;
+  bottom: 0;
+  right: 368px;
+  width: 190px;
+  height: 40px;
+  color: #969696;
+  font-size: 13px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #333;
+}
+
+.head .head-read span {
+  display: inline-block;
+  height: 100%;
+  padding: 0 6px;
+  cursor: pointer;
+}
+
+.head .head-read span:first-child {
+  color: #fff;
+  background-color: #3d3d3d;
+}
+
+.head .head-search {
+  position: absolute;
+  right: 18px;
+  bottom: 4px;
+  width: 332px;
+  height: 24px;
+  border: 1px solid #ffebad;
+  background-color: #444444;
+}
+
+.head .head-search input {
+  width: 304px;
+  height: 100%;
+  color: #fff;
+  background-color: #444444;
+  border: none;
+  padding-left: 2px;
+}
+
+.head .head-search a {
+  float: right;
+  width: 22px;
+  height: 100%;
+  background-image: url(../images/handbook/search.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.head .head-search:hover {
+  border: 1px solid transparent;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.mw-body {
+  width: 100%;
+}
+
+.mw-body #Menu {
+  float: left;
+  width: 168px;
+}
+
+.mw-body #Menu .Menu-big {
+  width: 100%;
+  list-style: none none;
+  background-color: rgba(20, 20, 20, 0.6);
+  border-top: 2px solid #f4c430;
+  border-bottom-right-radius: 5px;
+  -webkit-box-shadow: 2px 0 5px black, 0 2px 5px black;
+          box-shadow: 2px 0 5px black, 0 2px 5px black;
+}
+
+.mw-body #Menu .Menu-big li {
+  position: relative;
+  color: #eaeaea;
+  border-bottom: 1px solid #8c7729;
+  cursor: pointer;
+}
+
+.mw-body #Menu .Menu-big li span {
+  display: block;
+  position: relative;
+  font-size: 14px;
+  padding: 7px 0px;
+  padding-left: 18px;
+}
+
+.mw-body #Menu .Menu-big li span i {
+  position: absolute;
+  top: 2px;
+  left: 75px;
+  font-size: 12px;
+}
+
+.mw-body #Menu .Menu-big li span b {
+  position: absolute;
+  top: 2px;
+  left: 89px;
+  color: red;
+  font-size: 12px;
+}
+
+.mw-body #Menu .Menu-big li .Menu-small {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: -168px;
+  width: 168px;
+  color: #fff;
+  background-color: #333;
+  -webkit-box-shadow: -1px 2px 10px 0px rgba(0, 0, 0, 0.4), -1px -2px 10px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: -1px 2px 10px 0px rgba(0, 0, 0, 0.4), -1px -2px 10px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.mw-body #Menu .Menu-big li .Menu-small li:hover {
+  background-color: #f4c430;
+}
+
+.mw-body #Menu .Menu-big li .Menu-small li:last-child {
+  border-bottom: 0;
+}
+
+.mw-body #Menu .Menu-big li:hover {
+  color: #000;
+  background-color: #f4c430;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.mw-body #Menu .Menu-big li:hover .child::after {
+  border-left: 6px solid #000;
+}
+
+.mw-body #Menu .Menu-big li:hover ul {
+  display: block;
+}
+
+.mw-body #Menu .Menu-big .child::after {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  content: "";
+  border: 6px solid #eaeaea;
+  border-top: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-radius: 2px;
+  margin-top: -6px;
+}
+
+.mw-body #Menu .Menu-big:last-child {
+  border-bottom: 0;
+}
+
+.mw-body #Menu p {
+  color: #f4c430;
+  font-size: 16px;
+  font-weight: bold;
+  background-image: linear-gradient(225deg, #f4c430 5px, transparent 6px);
+  background-color: rgba(30, 30, 30, 0.6);
+  -webkit-box-shadow: 2px 0 5px black;
+          box-shadow: 2px 0 5px black;
+  padding: 8px 10px;
+  margin: 0px;
+  margin-top: 8px;
+}
+
+.mw-body #main {
+  color: #eaeaea;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  margin-left: 176px;
+  margin-right: 4px;
+  padding: 1.25em 1.5em 1.5em 1.5em;
+}
+
+.mw-body #main h1 {
+  color: #FFEBAD;
+  font-weight: 400;
+  font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+  font-size: 28px;
+  line-height: 1.3;
+  border-bottom: 1px solid #a2a9b1;
+}
+
+.mw-body #main h2 {
+  color: #FFEBAD;
+  font-weight: 400;
+  font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+  font-size: 20px;
+  line-height: 1.3;
+  border-bottom: 1px solid #a2a9b1;
+  margin-top: 1em;
+}
+
+.mw-body #main .toc {
+  width: 152px;
+  height: 236px;
+  background-color: #333333;
+  color: #EAEAEA;
+  overflow: hidden;
+}
+
+.mw-body #main .toc .toctitle {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.mw-body #main .toc .toctitle h3 {
+  display: inline-block;
+  color: #ffebad;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.mw-body #main .toc .toctitle span {
+  color: #f4c430;
+  cursor: pointer;
+}
+
+.mw-body #main .toc .big-ul {
+  font-size: 14px;
+  padding: 8px;
+}
+
+.mw-body #main .toc .big-ul li a {
+  display: inline-block;
+  color: #f4c430;
+}
+
+.mw-body #main .toc .big-ul li a span:first-child {
+  color: #EAEAEA;
+}
+
+.mw-body #main .toc .big-ul li .small-ul {
+  margin-left: 20px;
+  margin-top: 4px;
+}
+
+.mw-body #main .toc .big-ul li .small-ul li {
+  line-height: 26px;
+  cursor: pointer;
+}
+
+.mw-body #main .toc .big-ul li .small-ul li span:last-child {
+  color: #f4c430;
+}
+
+.mw-body #main .toc .big-ul .last-li {
+  margin-top: 8px;
+}
+
+.mw-body #main .title {
+  font-size: 15px;
+  margin: 0.3em 0 0 1.6em;
+}
+
+.mw-body #main .title li {
+  list-style: disc;
+  margin-bottom: 6px;
+}
+
+.mw-body #main .title li a {
+  color: #f4c430;
+}
+
+.mw-body #main .twenty {
+  height: 52px;
+  overflow: hidden;
+}
+
+.mw-body #main .twenty .span {
+  margin-top: 4px;
+}
+
+.mw-body #main .twenty .span span {
+  border: 4px solid;
+  display: inline-block;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 0px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #f4c430;
+  -o-border-image: url(../images/dress/border_dot.svg);
+     border-image: url(../images/dress/border_dot.svg);
+  border-image-slice: 2;
+  border-image-width: 2px;
+  background-clip: padding-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.mw-body #main .twenty .twenty-photo {
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.mw-body #main .twenty .twenty-photo ul li {
+  float: left;
+  width: 255px;
+}
+
+.mw-body #main .twenty .twenty-photo ul li img {
+  width: 250px;
+  height: 104px;
+}
+
+.mw-body #main .twenty .twenty-photo ul li .gallerytext {
+  text-align: center;
+  font-size: 13px;
+  padding: 6px 4px;
+}
+
+.mw-body #main .twenty .twenty-photo ul li .gallerytext p {
+  margin: 0.5em 0;
+}
+
+.mw-body #main .twenty .twenty-photo ul li .gallerytext b {
+  color: #808080;
+}
+
+.mw-body #main .twenty .twenty-photo ul li .gallerytext b a {
+  color: #f4c430;
+}
+
+.mw-body #main .nineteen {
+  height: 52px;
+  overflow: hidden;
+}
+
+.mw-body #main .nineteen .span {
+  margin-top: 4px;
+}
+
+.mw-body #main .nineteen .span span {
+  border: 4px solid;
+  display: inline-block;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 0px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #f4c430;
+  -o-border-image: url(../images/dress/border_dot.svg);
+     border-image: url(../images/dress/border_dot.svg);
+  border-image-slice: 2;
+  border-image-width: 2px;
+  background-clip: padding-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.mw-body #main .nineteen .nineteen-photo {
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.mw-body #main .nineteen .nineteen-photo ul {
+  max-width: 1036px;
+}
+
+.mw-body #main .nineteen .nineteen-photo ul li {
+  float: left;
+  width: 255px;
+  margin-bottom: 6px;
+}
+
+.mw-body #main .nineteen .nineteen-photo ul li img {
+  width: 250px;
+  height: 104px;
+}
+
+.mw-body #main .nineteen .nineteen-photo ul li .gallerytext {
+  text-align: center;
+  font-size: 13px;
+  padding: 6px 4px;
+}
+
+.mw-body #main .nineteen .nineteen-photo ul li .gallerytext p {
+  margin: 0.5em 0;
+}
+
+.mw-body #main .nineteen .nineteen-photo ul li .gallerytext b {
+  color: #808080;
+}
+
+.mw-body #main .nineteen .nineteen-photo ul li .gallerytext b a {
+  color: #f4c430;
+}
+
+.mw-body #main .eighteen {
+  height: 52px;
+  overflow: hidden;
+}
+
+.mw-body #main .eighteen .span {
+  margin-top: 4px;
+}
+
+.mw-body #main .eighteen .span span {
+  border: 4px solid;
+  display: inline-block;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 0px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #f4c430;
+  -o-border-image: url(../images/dress/border_dot.svg);
+     border-image: url(../images/dress/border_dot.svg);
+  border-image-slice: 2;
+  border-image-width: 2px;
+  background-clip: padding-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.mw-body #main .eighteen .eighteen-photo {
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.mw-body #main .eighteen .eighteen-photo ul {
+  max-width: 1036px;
+}
+
+.mw-body #main .eighteen .eighteen-photo ul li {
+  float: left;
+  width: 255px;
+  margin-bottom: 6px;
+}
+
+.mw-body #main .eighteen .eighteen-photo ul li img {
+  width: 250px;
+  height: 104px;
+}
+
+.mw-body #main .eighteen .eighteen-photo ul li .gallerytext {
+  text-align: center;
+  font-size: 13px;
+  padding: 6px 4px;
+}
+
+.mw-body #main .eighteen .eighteen-photo ul li .gallerytext p {
+  margin: 0.5em 0;
+}
+
+.mw-body #main .eighteen .eighteen-photo ul li .gallerytext b {
+  color: #808080;
+}
+
+.mw-body #main .eighteen .eighteen-photo ul li .gallerytext b a {
+  color: #f4c430;
+}
+
+.mw-body #main .seventeen {
+  height: 52px;
+  overflow: hidden;
+}
+
+.mw-body #main .seventeen .span {
+  margin-top: 4px;
+}
+
+.mw-body #main .seventeen .span span {
+  border: 4px solid;
+  display: inline-block;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 0px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #f4c430;
+  -o-border-image: url(../images/dress/border_dot.svg);
+     border-image: url(../images/dress/border_dot.svg);
+  border-image-slice: 2;
+  border-image-width: 2px;
+  background-clip: padding-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.mw-body #main .seventeen .seventeen-photo {
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.mw-body #main .seventeen .seventeen-photo ul {
+  max-width: 1036px;
+}
+
+.mw-body #main .seventeen .seventeen-photo ul li {
+  float: left;
+  width: 255px;
+  margin-bottom: 6px;
+}
+
+.mw-body #main .seventeen .seventeen-photo ul li img {
+  width: 250px;
+  height: 104px;
+}
+
+.mw-body #main .seventeen .seventeen-photo ul li .gallerytext {
+  text-align: center;
+  font-size: 13px;
+  padding: 6px 4px;
+}
+
+.mw-body #main .seventeen .seventeen-photo ul li .gallerytext p {
+  margin: 0.5em 0;
+}
+
+.mw-body #main .seventeen .seventeen-photo ul li .gallerytext b {
+  color: #808080;
+}
+
+.mw-body #main .seventeen .seventeen-photo ul li .gallerytext b a {
+  color: #f4c430;
+}
+
+.mw-body #main .sixteen {
+  height: 52px;
+  overflow: hidden;
+}
+
+.mw-body #main .sixteen .span {
+  margin-top: 4px;
+}
+
+.mw-body #main .sixteen .span span {
+  border: 4px solid;
+  display: inline-block;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 0px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #f4c430;
+  -o-border-image: url(../images/dress/border_dot.svg);
+     border-image: url(../images/dress/border_dot.svg);
+  border-image-slice: 2;
+  border-image-width: 2px;
+  background-clip: padding-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.mw-body #main .sixteen .sixteen-photo {
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.mw-body #main .sixteen .sixteen-photo ul li {
+  float: left;
+  width: 255px;
+}
+
+.mw-body #main .sixteen .sixteen-photo ul li img {
+  width: 250px;
+  height: 104px;
+}
+
+.mw-body #main .sixteen .sixteen-photo ul li .gallerytext {
+  text-align: center;
+  font-size: 13px;
+  padding: 6px 4px;
+}
+
+.mw-body #main .sixteen .sixteen-photo ul li .gallerytext p {
+  margin: 0.5em 0;
+}
+
+.mw-body #main .sixteen .sixteen-photo ul li .gallerytext b {
+  color: #808080;
+}
+
+.mw-body #main .sixteen .sixteen-photo ul li .gallerytext b a {
+  color: #f4c430;
+}
+
+.mw-body #main .drilliance,
+.mw-body #main .black {
+  font-size: 15px;
+  margin: 0.3em 0 0 1.6em;
+}
+
+.mw-body #main .drilliance li,
+.mw-body #main .black li {
+  list-style: disc;
+  margin-bottom: 6px;
+}
+
+.footer {
+  position: relative;
+  background-color: rgba(10, 10, 10, 0.8);
+  border-top: 1px solid #333333;
+  padding: 1.25em;
+  margin-left: 176px;
+  margin-right: 4px;
+}
+
+.footer p {
+  color: #cecece;
+  font-size: 10px;
+  margin: 14px 0;
+}
+
+.footer p a {
+  color: #f4c430;
+}
+
+.footer p a:hover {
+  text-decoration: underline;
+}
+
+.footer ul {
+  padding-bottom: 40px;
+}
+
+.footer ul li {
+  float: left;
+  color: #f4c430;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.footer ul li:hover {
+  text-decoration: underline;
+}
+
+.footer div {
+  position: absolute;
+  bottom: 42px;
+  right: 28px;
+}
+
+.footer div img {
+  cursor: pointer;
+}
+
+.backToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  height: 160px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-image: url(../images/handbook/Up_btn.gif);
+  background-size: 100%;
+  z-index: 100;
+  opacity: 0;
+  cursor: pointer;
+}
+/*# sourceMappingURL=dress.css.map */
