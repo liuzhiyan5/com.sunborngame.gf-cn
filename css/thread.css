@@ -264,131 +264,6 @@ body {
   border-bottom: 1px solid #a2a9b1;
 }
 
-.mw-body #main .banner {
-  position: relative;
-  width: 718px;
-  height: 381px;
-  border: 1px solid #fff;
-  margin: 0 auto;
-}
-
-.mw-body #main .banner .banner-in {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.mw-body #main .banner .banner-in ul {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2876px;
-  height: 100%;
-}
-
-.mw-body #main .banner .banner-in ul li {
-  position: relative;
-  float: left;
-  width: 718px;
-  height: 100%;
-}
-
-.mw-body #main .banner .banner-in ul li img {
-  width: 100%;
-  height: 100%;
-}
-
-.mw-body #main .banner .banner-in ul li p {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: calc(100% - 20px);
-  height: 35px;
-  font-size: 16px;
-  line-height: 35px;
-  background-image: -webkit-gradient(linear, left top, right top, from(black), to(transparent));
-  background-image: linear-gradient(90deg, black, transparent);
-  padding: 0 10px;
-}
-
-.mw-body #main .banner .banner-in ul li p span:first-child {
-  color: #f28500;
-}
-
-.mw-body #main .banner .banner-in ul li p span:nth-child(2) {
-  color: #eaeaea;
-}
-
-.mw-body #main .banner .banner-in ul li p b {
-  color: #eaeaea;
-  font-weight: 700;
-}
-
-.mw-body #main .banner .banner-in .banner-prev {
-  position: absolute;
-  top: 50%;
-  left: 14px;
-  width: 40px;
-  height: 70px;
-  background-image: url(../images/handbook/arrows.png);
-  margin-top: -35px;
-  z-index: 1;
-}
-
-.mw-body #main .banner .banner-in .banner-prev:hover {
-  background-position: 0 -71px;
-}
-
-.mw-body #main .banner .banner-in .banner-next {
-  position: absolute;
-  top: 50%;
-  right: 14px;
-  width: 40px;
-  height: 70px;
-  background-image: url(../images/handbook/arrows.png);
-  background-position: -44px 0;
-  margin-top: -35px;
-  z-index: 1;
-}
-
-.mw-body #main .banner .banner-in .banner-next:hover {
-  background-position: -44px -71px;
-}
-
-.mw-body #main .banner ol {
-  position: absolute;
-  bottom: -30px;
-  right: 0px;
-}
-
-.mw-body #main .banner ol li {
-  float: left;
-  width: 10px;
-  height: 10px;
-  background-color: #303232;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  margin: 4px;
-}
-
-.mw-body #main .banner ol li:hover {
-  border: 1px solid #fff;
-  background-color: #444;
-}
-
-.mw-body #main .banner ol .active {
-  background-color: #dbb12c;
-  border: 1px solid #fff;
-}
-
-.mw-body #main .banner ol .active:hover {
-  background-color: #dbb12c;
-  border: 1px solid #fff;
-}
-
 .mw-body #main h2 {
   color: #FFEBAD;
   font-weight: 400;
@@ -396,209 +271,77 @@ body {
   font-size: 20px;
   line-height: 1.3;
   border-bottom: 1px solid #a2a9b1;
-  margin-top: 42px;
+  margin-top: 1em;
 }
 
-.mw-body #main .suo {
-  display: inline-block;
-  width: 800px;
+.mw-body #main .toc {
+  width: 166px;
+  background-color: #333333;
+  color: #EAEAEA;
+  overflow: hidden;
 }
 
-.mw-body #main .nomobile .center {
-  width: 570px;
+.mw-body #main .toc .toctitle {
+  padding: 10px 0;
+  padding-bottom: 0;
   text-align: center;
-  margin: 0 auto;
 }
 
-.mw-body #main .nomobile .center a {
+.mw-body #main .toc .toctitle h3 {
   display: inline-block;
-  width: 140px;
-  height: 64px;
+  color: #ffebad;
+  font-weight: 700;
+  font-size: 14px;
 }
 
-.mw-body #main .nomobile .center a img {
-  width: 100%;
+.mw-body #main .toc .toctitle span {
+  color: #f4c430;
+  cursor: pointer;
 }
 
-.mw-body #main .information {
-  position: relative;
+.mw-body #main .toc .big-ul {
+  font-size: 13px;
+  padding: 8px;
 }
 
-.mw-body #main .information ul {
+.mw-body #main .toc .big-ul li a {
+  display: inline-block;
+  color: #f4c430;
+  margin-bottom: 10px;
+}
+
+.mw-body #main .toc .big-ul li a span:first-child {
   color: #EAEAEA;
-  font-size: 14px;
-  padding-left: 20px;
+  margin-right: 4px;
 }
 
-.mw-body #main .information ul li {
-  list-style: disc;
-  padding-top: 12px;
-}
-
-.mw-body #main .information dl {
-  color: #EAEAEA;
-  font-size: 14px;
-  padding-left: 22px;
-}
-
-.mw-body #main .information dl dd {
-  padding-top: 4px;
-}
-
-.mw-body #main .information div {
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-}
-
-.mw-body #main .added {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-image: url(../images/handbook/Icon_3x.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  cursor: pointer;
-}
-
-.mw-body #main .added img {
-  width: 80%;
-  height: 80%;
-  padding: 10%;
-}
-
-.mw-body #main .added span {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/handbook/Icon_3x_star.png);
-  background-size: 100% 100%;
-  z-index: 1;
-}
-
-.mw-body #main .added a {
-  position: relative;
-  color: #6bdfce;
-  font-size: 10px;
-  padding-left: 18px;
-}
-
-.mw-body #main .added a small {
-  position: absolute;
-  top: -4px;
-  left: 0;
-}
-
-.mw-body #main .costume {
-  margin-top: 8px;
-}
-
-.mw-body #main .welcome img {
-  margin-top: 8px;
-}
-
-.mw-body #main .welcome ul {
-  padding: 10px 16px;
-}
-
-.mw-body #main .welcome ul li {
+.mw-body #main .limit {
   color: #eaeaea;
+}
+
+.mw-body #main .limit ul {
+  font-size: 14px;
+  margin: 6px 22px;
+}
+
+.mw-body #main .limit ul li {
   list-style: disc;
+}
+
+.mw-body #main .limit table {
   font-size: 14px;
+  text-align: center;
 }
 
-.mw-body #main .game ul,
-.mw-body #main .special ul,
-.mw-body #main .outside ul {
-  display: inline-block;
-  margin-left: 20px;
+.mw-body #main .limit table tr th {
+  width: 180px;
+  font-weight: 400;
+  line-height: 2;
 }
 
-.mw-body #main .game ul li,
-.mw-body #main .special ul li,
-.mw-body #main .outside ul li {
-  color: #eaeaea;
-  list-style: disc;
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-.mw-body #main .game ul li span,
-.mw-body #main .special ul li span,
-.mw-body #main .outside ul li span {
-  color: #f4c430;
-  cursor: pointer;
-}
-
-.mw-body #main .game ul li span:hover,
-.mw-body #main .special ul li span:hover,
-.mw-body #main .outside ul li span:hover {
-  text-decoration: underline;
-}
-
-.mw-body #main .game ul li a,
-.mw-body #main .special ul li a,
-.mw-body #main .outside ul li a {
-  color: #f4c430;
-  cursor: pointer;
-}
-
-.mw-body #main .game ul li a:hover,
-.mw-body #main .special ul li a:hover,
-.mw-body #main .outside ul li a:hover {
-  text-decoration: underline;
-}
-
-.mw-body #main .game ul li .red,
-.mw-body #main .special ul li .red,
-.mw-body #main .outside ul li .red {
-  color: #f28500;
-}
-
-.mw-body #main .game ul:last-child,
-.mw-body #main .special ul:last-child,
-.mw-body #main .outside ul:last-child {
-  margin-left: 500px;
-}
-
-.mw-body #main .media ul {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 20px;
-}
-
-.mw-body #main .media ul li {
-  color: #eaeaea;
-  list-style: disc;
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-.mw-body #main .media ul img {
-  margin-top: 2px;
-}
-
-.mw-body #main .media ul p {
-  color: #eaeaea;
-  font-size: 14px;
-  line-height: 24px;
-  margin-top: 6px;
-}
-
-.mw-body #main .media ul p a {
-  color: #f4c430;
-}
-
-.mw-body #main .media ul p a:hover {
-  text-decoration: underline;
-}
-
-.mw-body #main .media ul:last-child {
-  margin-left: 418px;
+.mw-body #main .limit table tr th img {
+  width: 150px;
+  height: 267px;
 }
 
 .footer {
@@ -662,4 +405,4 @@ body {
   opacity: 0;
   cursor: pointer;
 }
-/*# sourceMappingURL=handbook.css.map */
+/*# sourceMappingURL=thread.css.map */

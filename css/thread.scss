@@ -259,131 +259,6 @@ body {
             border-bottom: 1px solid #a2a9b1;
         }
 
-        .banner {
-            position: relative;
-            width: 718px;
-            height: 381px;
-            border: 1px solid #fff;
-            margin: 0 auto;
-
-            .banner-in {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-
-                ul {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 2876px;
-                    height: 100%;
-
-                    li {
-                        position: relative;
-                        float: left;
-                        width: 718px;
-                        height: 100%;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                        }
-
-                        p {
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: calc(100% - 20px);
-                            height: 35px;
-                            font-size: 16px;
-                            line-height: 35px;
-                            background-image: linear-gradient(90deg, black, transparent);
-                            padding: 0 10px;
-
-                            span {
-                                &:first-child {
-                                    color: #f28500;
-                                }
-
-                                &:nth-child(2) {
-                                    color: #eaeaea;
-                                }
-                            }
-
-                            b {
-                                color: #eaeaea;
-                                font-weight: 700;
-                            }
-                        }
-                    }
-                }
-
-                .banner-prev {
-                    position: absolute;
-                    top: 50%;
-                    left: 14px;
-                    width: 40px;
-                    height: 70px;
-                    background-image: url(../images/handbook/arrows.png);
-                    margin-top: -35px;
-                    z-index: 1;
-
-                    &:hover {
-                        background-position: 0 -71px;
-                    }
-                }
-
-                .banner-next {
-                    position: absolute;
-                    top: 50%;
-                    right: 14px;
-                    width: 40px;
-                    height: 70px;
-                    background-image: url(../images/handbook/arrows.png);
-                    background-position: -44px 0;
-                    margin-top: -35px;
-                    z-index: 1;
-
-                    &:hover {
-                        background-position: -44px -71px;
-                    }
-                }
-            }
-
-            ol {
-                position: absolute;
-                bottom: -30px;
-                right: 0px;
-
-                li {
-                    float: left;
-                    width: 10px;
-                    height: 10px;
-                    background-color: #303232;
-                    border: 1px solid #ccc;
-                    cursor: pointer;
-                    transform: rotate(45deg);
-                    margin: 4px;
-
-                    &:hover {
-                        border: 1px solid #fff;
-                        background-color: #444;
-                    }
-                }
-
-                .active {
-                    background-color: #dbb12c;
-                    border: 1px solid #fff;
-
-                    &:hover {
-                        background-color: #dbb12c;
-                        border: 1px solid #fff;
-                    }
-                }
-            }
-        }
-
         h2 {
             color: #FFEBAD;
             font-weight: 400;
@@ -391,201 +266,82 @@ body {
             font-size: 20px;
             line-height: 1.3;
             border-bottom: 1px solid #a2a9b1;
-            margin-top: 42px;
+            margin-top: 1em;
         }
 
-        .suo {
-            display: inline-block;
-            width: 800px;
-        }
+        .toc {
+            width: 166px;
+            // height: 236px;
+            background-color: #333333;
+            color: #EAEAEA;
+            overflow: hidden;
 
-        .nomobile {
-            .center {
-                width: 570px;
+            .toctitle {
+                padding: 10px 0;
+                padding-bottom: 0;
                 text-align: center;
-                margin: 0 auto;
 
-                a {
+                h3 {
                     display: inline-block;
-                    width: 140px;
-                    height: 64px;
-
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-
-        .information {
-            position: relative;
-
-            ul {
-                color: #EAEAEA;
-                font-size: 14px;
-                padding-left: 20px;
-
-                li {
-                    list-style: disc;
-                    padding-top: 12px;
-                }
-            }
-
-            dl {
-                color: #EAEAEA;
-                font-size: 14px;
-                padding-left: 22px;
-
-                dd {
-                    padding-top: 4px;
-                }
-            }
-
-            div {
-                position: absolute;
-                top: 0;
-                right: 0;
-                cursor: pointer;
-            }
-        }
-
-        .added {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            background-image: url(../images/handbook/Icon_3x.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            cursor: pointer;
-
-            img {
-                width: 80%;
-                height: 80%;
-                padding: 10%;
-            }
-
-            span {
-                display: inline-block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-image: url(../images/handbook/Icon_3x_star.png);
-                background-size: 100% 100%;
-                z-index: 1;
-            }
-
-            a {
-                position: relative;
-                color: #6bdfce;
-                font-size: 10px;
-                padding-left: 18px;
-
-                small {
-                    position: absolute;
-                    top: -4px;
-                    left: 0;
-                }
-            }
-        }
-
-        .costume {
-            margin-top: 8px;
-        }
-
-        .welcome {
-            img {
-                margin-top: 8px;
-            }
-
-            ul {
-                padding: 10px 16px;
-
-                li {
-                    color: #eaeaea;
-                    list-style: disc;
+                    color: #ffebad;
+                    font-weight: 700;
                     font-size: 14px;
                 }
-            }
-        }
 
-        .game,
-        .special,
-        .outside {
-            ul {
-                display: inline-block;
-                margin-left: 20px;
+                span {
+                    color: #f4c430;
+                    cursor: pointer;
+                }
+            }
+
+            .big-ul {
+                font-size: 13px;
+                padding: 8px;
 
                 li {
-                    color: #eaeaea;
-                    list-style: disc;
-                    font-size: 14px;
-                    margin-top: 10px;
-
-                    span {
-                        color: #f4c430;
-                        cursor: pointer;
-
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
-
                     a {
+                        display: inline-block;
                         color: #f4c430;
-                        cursor: pointer;
+                        margin-bottom: 10px;
 
-                        &:hover {
-                            text-decoration: underline;
+                        span {
+                            &:first-child {
+                                color: #EAEAEA;
+                                margin-right: 4px;
+                            }
                         }
                     }
-
-                    .red {
-                        color: #f28500;
-                    }
-                }
-
-                &:last-child {
-                    margin-left: 500px;
                 }
             }
         }
 
-        .media {
+        .limit {
+            color: #eaeaea;
+
             ul {
-                display: inline-block;
-                vertical-align: top;
-                margin-left: 20px;
+                font-size: 14px;
+                margin: 6px 22px;
 
                 li {
-                    color: #eaeaea;
                     list-style: disc;
-                    font-size: 14px;
-                    margin-top: 10px;
                 }
+            }
 
-                img {
-                    margin-top: 2px;
-                }
+            table {
+                font-size: 14px;
+                text-align: center;
 
-                p {
-                    color: #eaeaea;
-                    font-size: 14px;
-                    line-height: 24px;
-                    margin-top: 6px;
+                tr {
+                    th {
+                        width: 180px;
+                        font-weight: 400;
+                        line-height: 2;
 
-                    a {
-                        color: #f4c430;
-
-                        &:hover {
-                            text-decoration: underline;
+                        img {
+                            width: 150px;
+                            height: 267px;
                         }
                     }
-                }
-
-                &:last-child {
-                    margin-left: 418px;
                 }
             }
         }
